@@ -1,0 +1,27 @@
+services:
+- type: web
+  name: aves-api
+  runtime: python
+  repo: https://github.com/juan33344/clasificador-aves.git
+  region: oregon
+  plan: free
+  buildCommand: pip install -r requirements.txt
+  startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+  rootDir: python
+  envVars:
+    - key: PYTHONUNBUFFERED
+      value: '1'
+
+- type: web
+  name: aves-web
+  runtime: node
+  repo: https://github.com/juan33344/clasificador-aves.git
+  region: oregon
+  plan: free
+  buildCommand: cd web && npm ci && npm run build
+  startCommand: cd web && npx serve -s dist -l $PORT
+  rootDir: .
+  envVars:
+    - key: VITE_API_URL
+      value: https://aves-api.onrender.com/api
+

@@ -1,0 +1,10 @@
+0 Búho
+1 Carpintero
+2 Colibrí
+3 Cuervo
+4 Flamenco
+5 Garza
+6 Gaviota
+7 Loro
+8 Paloma
+9 Águila

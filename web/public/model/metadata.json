@@ -1,0 +1,14 @@
+{
+  "format": "graph-model",
+  "generatedBy": "TensorFlow.js Converter v3.11.0",
+  "convertedBy": "TensorFlow.js Converter",
+  "labels": [
+    "Aguila",
+    "Loro",
+    "Colibrí",
+    "Búho",
+    "Pato"
+  ],
+  "modelName": "Clasificador de Aves",
+  "trained": true
+}
