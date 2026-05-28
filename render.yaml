@@ -5,7 +5,7 @@ services:
   repo: https://github.com/juan33344/clasificador-aves.git
   region: oregon
   plan: free
-  buildCommand: cd python && pip install -r requirements.txt
+  buildCommand: cd python && pip install -r requirements-render.txt
   startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
   rootDir: .
   envVars:
